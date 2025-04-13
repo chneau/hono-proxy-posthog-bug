@@ -1,0 +1,29 @@
+{
+	"name": "hono-proxy-posthog-bug",
+	"scripts": {
+		"start": "bun run dev",
+		"dev": "bun _dev.ts",
+		"upgrade": "bun update --latest",
+		"check": "deno fmt --use-tabs --quiet; oxlint --fix-dangerously --quiet; timeout 3s biome check --write --unsafe .",
+		"lint": "tsc --noEmit",
+		"all": "bun run upgrade; bun run check; bun run lint"
+	},
+	"dependencies": {
+		"@tanstack/react-query": "^5.73.3",
+		"hono": "^4.7.6",
+		"posthog-js": "^1.235.6",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"zod": "^3.24.2"
+	},
+	"devDependencies": {
+		"@farmfe/cli": "^1.0.4",
+		"@farmfe/core": "^1.7.3",
+		"@farmfe/plugin-react": "^1.2.6",
+		"@types/bun": "^1.2.9",
+		"@types/react": "^19.1.1",
+		"@types/react-dom": "^19.1.2",
+		"react-refresh": "^0.17.0",
+		"typescript": "^5.8.3"
+	}
+}
