@@ -31,7 +31,10 @@ const app = new Hono()
 			url.pathname.startsWith("/ingest-working/array/")
 				? ASSET_HOST
 				: API_HOST;
-		const newUrl = `https://${hostname}${`${url.pathname.replace("/ingest-working", "")}${url.search}`}`;
+		const newUrl = `https://${hostname}${`${url.pathname.replace(
+			"/ingest-working",
+			"",
+		)}${url.search}`}`;
 		console.log(newUrl);
 		const headers = new Headers(request.headers);
 		headers.set("host", hostname);
@@ -58,7 +61,10 @@ const app = new Hono()
 			url.pathname.startsWith("/ingest/array/")
 				? ASSET_HOST
 				: API_HOST;
-		const newUrl = `https://${hostname}${`${url.pathname.replace("/ingest", "")}${url.search}`}`;
+		const newUrl = `https://${hostname}${`${url.pathname.replace(
+			"/ingest",
+			"",
+		)}${url.search}`}`;
 		console.log(newUrl);
 		request.headers.set("host", hostname);
 		return proxy(newUrl, request);
