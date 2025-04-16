@@ -58,7 +58,7 @@ export const App = () => {
 					}}
 					disabled={queryPosthogToken.isFetching || isPosthogRunning}
 				>
-					Run non-working proxy PostHog
+					Run non-working proxy PostHog (Now working! 🎆)
 				</button>
 				<button
 					type="button"

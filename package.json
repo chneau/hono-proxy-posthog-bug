@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@tanstack/react-query": "^5.74.3",
-		"hono": "^4.7.6",
+		"hono": "^4.7.7",
 		"posthog-js": "^1.236.1",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
